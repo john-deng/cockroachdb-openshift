@@ -19,9 +19,12 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: cockroachdb-${i}
+  annotations:
+    pv.beta.kubernetes.io/gid: "0"
   labels:
     type: local
     app: cockroachdb
+    
 spec:
   capacity:
     storage: 1Gi
@@ -45,4 +48,3 @@ spec:
 EOF
 done;
 
-oc replace --force -f cockroachdb-statefulset.yaml
