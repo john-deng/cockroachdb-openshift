@@ -19,7 +19,7 @@ then change uid-range and groups to 0
     openshift.io/sa.scc.uid-range: 0/10000
 ``
 
-## 3. Create PV,PVC
+## 3. Create PV,PVC (Select 3.1 or 3.2 depends on what is available on your openshift cluster)
 ### 3.1 Mount PV on host path (for demo only)
 
 ```
