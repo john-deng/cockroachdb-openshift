@@ -6,7 +6,7 @@
 set -exuo pipefail
 
 # Clean up anything from a prior run:
-oc delete petsets,pods,persistentvolumes,persistentvolumeclaims,services,poddisruptionbudget -l app=cockroachdb
+oc delete statefulset,pods,persistentvolumes,persistentvolumeclaims,services,poddisruptionbudget -l app=cockroachdb
 
 for i in $(seq 0 2); do
   echo "
